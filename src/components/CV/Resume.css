@@ -1,0 +1,48 @@
+.resume{
+    padding: 16px 64px;
+}
+.address{
+    margin-bottom: 20px;
+}
+.cv{
+    position: sticky;
+    max-width: 700px;
+    height: 68rem;
+    background: whitesmoke;
+    padding: 40px;
+    border-radius: 10px;
+}
+.cv-layout{
+    margin-left: 13px;
+    margin-top: 20px;
+    padding: 40px;
+    background-color: white;
+    max-width: 600px;
+    height: 60rem;
+}
+h3{
+    margin-top: 20px;
+}
+.cv-experience{
+    display: flex;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.exp-detail{
+    margin-left: 40px;
+}
+
+.cv-education{
+    display: flex;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.edu-detail{
+    margin-left: 40px;  
+}
+
+.desc{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
