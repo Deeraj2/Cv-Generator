@@ -3,11 +3,10 @@ import Exp from './Exp/Exp';
 import Edu from './Edu/Edu'
 import './Form.css';
 
-function Form({info, setInfo, exp, setExp, edu, setEdu}) {
 
-  
 
-  
+
+function Form({info, setInfo, exp, setExp, edu, setEdu, handlePrint}) {
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -30,7 +29,7 @@ function Form({info, setInfo, exp, setExp, edu, setEdu}) {
             <h2>Education</h2>
             <Edu edu={edu} setEdu={setEdu} />
 
-            <button type='submit' className='form-submit'>Generate PDF</button>
+            <button className='form-print' onClick={handlePrint}>Print this out!</button>
         </form>
     </div>
   )

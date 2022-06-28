@@ -1,8 +1,14 @@
+body{
+    background-color: whitesmoke;
+}
+
 .app-hero{
     text-align: center;
     width: 100%;
     height: 60px;
     margin-top: 20px;
     margin-bottom: 20px;
+    padding-bottom: 20px;
     font-size: 35px;
+    border-bottom: 1px solid lightgray;
 }

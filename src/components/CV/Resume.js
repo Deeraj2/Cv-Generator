@@ -1,10 +1,10 @@
 import React from 'react';
 import './Resume.css';
 
-function Resume({info, exp, edu}) {
+const  Resume = React.forwardRef(({info, exp, edu}, ref) => {
   return (
-    <div className='resume'>
-        <div className='cv'>
+    <div className='resume' >
+        <div className='cv' ref={ref} >
             <div className='cv-layout'>
                 <h2>{info.name}</h2>
                 <p>{info.email}</p>
@@ -47,6 +47,6 @@ function Resume({info, exp, edu}) {
         </div>
     </div>
   )
-}
+})
 
-export default Resume
+export default Resume;
