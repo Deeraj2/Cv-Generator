@@ -7,7 +7,7 @@
 .cv{
     position: sticky;
     max-width: 700px;
-    height: 68rem;
+    height: 83rem;
     background: whitesmoke;
     padding: 40px;
     border-radius: 10px;
@@ -18,7 +18,7 @@
     padding: 40px;
     background-color: white;
     max-width: 600px;
-    height: 60rem;
+    height: 75rem;
 }
 h3{
     margin-top: 20px;

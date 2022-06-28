@@ -1,9 +1,13 @@
 import React from 'react';
+import Exp from './Exp/Exp';
+import Edu from './Edu/Edu'
 import './Form.css';
 
-function Form({info, setInfo}) {
+function Form({info, setInfo, exp, setExp, edu, setEdu}) {
 
- 
+  
+
+  
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -21,18 +25,10 @@ function Form({info, setInfo}) {
             <textarea placeholder='Description' className='form-desc' value={info.desc} onChange={(e)=> setInfo({...info, desc:e.target.value})} />
 
             <h2>Experience</h2>
-            <input type='text' placeholder='Position' required />
-            <input type='text' placeholder='Company' required />
-            <input type='text' placeholder='City' required />
-            <input type='text' placeholder='From' required />
-            <input type='text' placeholder='To' required />
+            <Exp exp={exp} setExp={setExp} />
 
             <h2>Education</h2>
-            <input type='text' placeholder='University' required />
-            <input type='text' placeholder='City' required />
-            <input type='text' placeholder='Degree' required />
-            <input type='text' placeholder='From' required />
-            <input type='text' placeholder='To' required />
+            <Edu edu={edu} setEdu={setEdu} />
 
             <button type='submit' className='form-submit'>Generate PDF</button>
         </form>

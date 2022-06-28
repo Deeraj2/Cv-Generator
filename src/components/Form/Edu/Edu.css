@@ -1,16 +1,12 @@
-.form{
-    padding: 16px 64px;
-}
-
-.form-input{
+.education {
     display: flex;
     flex-direction: column;
     max-width: 600px;
     background: whitesmoke;
-    padding: 40px;
     border-radius: 10px;
 }
-.form-input > input{
+
+.education>input {
     max-width: 500px;
     height: 20px;
     margin: 10px;
@@ -20,21 +16,13 @@
     outline: none;
     border-radius: 5px;
 }
-.form-input > h2{
+
+.education>h2 {
     margin-left: 8px;
     margin-top: 20px;
 }
-.form-desc{
-    margin-left: 10px;
-    max-width: 502px;
-    height: 90px;
-    padding: 10px;
-    font-size: 15px;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-}
-.form-submit{
+
+.edu-btn {
     margin-left: 9px;
     max-width: 525px;
     height: 50px;
@@ -42,6 +30,9 @@
     font-weight: 500;
     padding: 10px;
     border: none;
+    background-color: gray;
+    color: #fff;
+    margin-bottom: 10px;
     border-radius: 9px;
     cursor: pointer;
 }

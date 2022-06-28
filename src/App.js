@@ -13,18 +13,34 @@ function App() {
     address: "",
     desc: ""
   })
+  const [exp, setExp] = useState([{
+    position: '',
+    company: '',
+    city: '',
+    from: '',
+    to: ''
+    }
+  ])
 
-  console.log(info)
+  const [edu, setEdu] = useState([{
+    university: '',
+    city:'',
+    degree:'',
+    from: '',
+    to: ''
+  }])
+
+  console.log(edu)
 
   return (
     <div className="app">
       <h1 className='app-hero'>CV Application</h1>
       <Grid container spacing={2}>
         <Grid item xs={12} md={6}>
-          <Form  setInfo={setInfo} info={info} />
+          <Form  setInfo={setInfo} info={info} exp={exp} setExp={setExp} edu={edu} setEdu={setEdu}  />
         </Grid>
         <Grid item xs={12} md={6}>
-          <Resume  info={info}/>
+          <Resume  info={info} exp={exp} edu={edu} />
         </Grid>
       </Grid>
       

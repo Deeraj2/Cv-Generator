@@ -1,7 +1,7 @@
 import React from 'react';
 import './Resume.css';
 
-function Resume({info}) {
+function Resume({info, exp, edu}) {
   return (
     <div className='resume'>
         <div className='cv'>
@@ -15,29 +15,34 @@ function Resume({info}) {
                 <p className='desc'>{info.desc}</p>
                 <hr />
                 <h3>Experience</h3>
-                <div className='cv-experience'>
-                    
-                    <div className='exp-date'>
-                        <p>to <span>-</span> from</p>
+                {exp.map((singleExp, index)=>(
+                    <div key={index} className='cv-experience'>
+                        <div className='exp-date'>
+                            <p>{singleExp.from} <span>-</span> {singleExp.to}</p>
+                        </div>
+                        <div className='exp-detail'>
+                            <h4>{singleExp.position}</h4>
+                            <p>{singleExp.company}</p>
+                            <p>{singleExp.city}</p>
+                        </div>
                     </div>
-                    <div className='exp-detail'>
-                        <h4>Position</h4>
-                        <p>Company</p>
-                        <p>City</p>
-                    </div>
-                </div>
+                ))}
+                
                 <hr />
                 <h3>Education</h3>
-                <div className='cv-education'>    
+                {edu.map((singleEdu, index)=>(
+                    <div key={index} className='cv-education'>    
                     <div className='edu-date'>
-                        <p>to <span>-</span> from</p>
+                        <p>{singleEdu.from} <span>-</span> {singleEdu.to}</p>
                     </div>
                     <div className='edu-detail'>
-                        <h4>University</h4>
-                        <p>Degree</p>
-                        <p>City</p>
+                        <h4>{singleEdu.university}</h4>
+                        <p> {singleEdu.degree} </p>
+                        <p> {singleEdu.city} </p>
                     </div>
                 </div>
+                ))}
+                
             </div>
         </div>
     </div>
