@@ -6,6 +6,8 @@ import Form from './components/Form/Form';
 import { useReactToPrint } from 'react-to-print';
 
 function App() {
+
+  //General information 
    const [info, setInfo] = useState({
     name:"",
     title: "",
@@ -14,6 +16,8 @@ function App() {
     address: "",
     desc: ""
   })
+
+  //Experience
   const [exp, setExp] = useState([{
     position: '',
     company: '',
@@ -23,6 +27,7 @@ function App() {
     }
   ])
 
+  //Education
   const [edu, setEdu] = useState([{
     university: '',
     city:'',
@@ -42,11 +47,14 @@ function App() {
   return (
     <div className="app">
       <h1 className='app-hero'>CV Application</h1>
+      {/* Grid */}
       <Grid container spacing={2}>
-        <Grid item xs={11} md={6}>  
+        <Grid item xs={11} md={6}>
+          {/* Form   */}
           <Form  setInfo={setInfo} info={info} exp={exp} setExp={setExp} edu={edu} setEdu={setEdu}  handlePrint={handlePrint} />
         </Grid>
         <Grid item xs={11} md={6}>
+          {/* Resume */}
           <Resume  info={info} exp={exp} edu={edu} handlePrint={handlePrint}  ref={componentRef}  />
         </Grid>
       </Grid>

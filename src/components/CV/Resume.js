@@ -5,6 +5,8 @@ const  Resume = React.forwardRef(({info, exp, edu}, ref) => {
   return (
     <div className='resume' >
         <div className='cv' ref={ref} >
+
+            {/* General information */}
             <div className='cv-layout'>
                 <h2>{info.name}</h2>
                 <p>{info.email}</p>
@@ -14,6 +16,9 @@ const  Resume = React.forwardRef(({info, exp, edu}, ref) => {
                 <h3>{info.title}</h3>
                 <p className='desc'>{info.desc}</p>
                 <hr />
+
+
+            {/* Experience */}
                 <h3>Experience</h3>
                 {exp.map((singleExp, index)=>(
                     <div key={index} className='cv-experience'>
@@ -28,6 +33,9 @@ const  Resume = React.forwardRef(({info, exp, edu}, ref) => {
                     </div>
                 ))}
                 
+
+
+            {/* Education */}
                 <hr />
                 <h3>Education</h3>
                 {edu.map((singleEdu, index)=>(
@@ -42,7 +50,9 @@ const  Resume = React.forwardRef(({info, exp, edu}, ref) => {
                     </div>
                 </div>
                 ))}
-                
+
+
+
             </div>
         </div>
     </div>
